@@ -1,0 +1,109 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Microsoft Graph API
+  description: API for accessing Microsoft Graph resources
+
+paths:
+  /sites/{site-id}/lists/{list-id}/items:
+    get:
+      summary: Get items from a list
+      description: |
+        Get items from a list in a SharePoint site.
+
+        The list contains the following fields:
+
+        - Device Photo
+        - Device Name
+        - Device Type
+        - Asset Brand
+        - Model
+        - Status
+        - Available Applications
+        - Device Location
+        - Locker
+        - Sublocation
+        - Current Owner
+        - Loan Date
+        - Return Date
+        - Condition Observations
+        - MAC Address
+        - Credentials
+        - Serial Number
+      parameters:
+        - name: site-id
+          in: path
+          description: The ID of the SharePoint site.
+          required: true
+          schema:
+            type: string
+        - name: list-id
+          in: path
+          description: The ID of the list in the SharePoint site.
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        Device Photo:
+                          type: string
+                        Device Name:
+                          type: string
+                        Device Type:
+                          type: string
+                        Asset Brand:
+                          type: string
+                        Model:
+                          type: string
+                        Status:
+                          type: string
+                        Available Applications:
+                          type: string
+                        Device Location:
+                          type: string
+                        Locker:
+                          type: string
+                        Sublocation:
+                          type: string
+                        Current Owner:
+                          type: string
+                        Loan Date:
+                          type: string
+                          format: date
+                        Return Date:
+                          type: string
+                          format: date
+                        Condition Observations:
+                          type: string
+                        MAC Address:
+                          type: string
+                        Credentials:
+                          type: string
+                        Serial Number:
+                          type: string      
+          '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error
+      security:
+        - bearerAuth: []
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
