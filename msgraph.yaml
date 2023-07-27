@@ -2,8 +2,9 @@ openapi: 3.0.0
 info:
   version: 1.0.0
   title: Microsoft Graph API
-  description: API for accessing Microsoft Graph resources
-
+  description: This Swagger file describes the Microsoft Graph API endpoint for retrieving items from a list within a site
+servers:
+  - url: https://graph.microsoft.com/v1.0
 paths:
   /sites/{site-id}/lists/{list-id}/items:
     get:
