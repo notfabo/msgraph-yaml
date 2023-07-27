@@ -10,6 +10,8 @@ paths:
       summary: Get items from a list
       description: |
         Get items from a list in a SharePoint site.
+        Use '8097f280-a892-4e9b-8fa4-a4d7d533f9d2' as site-id
+        Use 'ccc6f2eb-6e1d-41bd-a91a-239b8916af23' as list-id
 
         The list contains the following fields:
 
