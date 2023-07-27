@@ -60,52 +60,69 @@ paths:
                       properties:
                         Device Photo:
                           type: string
+                          example: "https://example.com/photos/device123.jpg"
                         Device Name:
                           type: string
+                          example: "Device123"
                         Device Type:
                           type: string
+                          example: "Mobile Phone"
                         Asset Brand:
                           type: string
+                          example: "BrandX"
                         Model:
                           type: string
+                          example: "ModelA"
                         Status:
                           type: string
+                          example: "In Use"
                         Available Applications:
                           type: string
+                          example: "AppA, AppB, AppC"
                         Device Location:
                           type: string
+                          example: "Floor 3, Room 301"
                         Locker:
                           type: string
+                          example: "Locker123"
                         Sublocation:
                           type: string
+                          example: "Cabinet B"
                         Current Owner:
                           type: string
+                          example: "John Doe"
                         Loan Date:
                           type: string
                           format: date
+                          example: "2023-07-25"
                         Return Date:
                           type: string
                           format: date
+                          example: "2023-08-10"
                         Condition Observations:
                           type: string
+                          example: "No visible damages"
                         MAC Address:
                           type: string
+                          example: "00:11:22:33:44:55"
                         Credentials:
                           type: string
+                          example: "Username: user123, Password: pass456"
                         Serial Number:
-                          type: string      
+                          type: string
+                          example: "SN123456789"     
           '401':
-          description: Unauthorized
-        '403':
-          description: Forbidden
-        '404':
-          description: Not Found
-        '500':
-          description: Internal Server Error
-      security:
-        - bearerAuth: []
-components:
-  securitySchemes:
-    bearerAuth:
-      type: http
-      scheme: bearer
+            description: Unauthorized
+          '403':
+            description: Forbidden
+          '404':
+            description: Not Found
+          '500':
+            description: Internal Server Error
+        security:
+          - bearerAuth: []
+  components:
+    securitySchemes:
+      bearerAuth:
+        type: http
+        scheme: bearer
