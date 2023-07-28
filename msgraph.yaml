@@ -7,7 +7,7 @@ info:
 servers:
   - url: https://graph.microsoft.com/v1.0
 paths:
-  /sites/{site-id}/lists/{list-id}/items:
+  /sites/{site-id}/lists/{list-id}/items?expand=fields:
     get:
       summary: get items from a list
       description: |
