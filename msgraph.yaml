@@ -29,7 +29,10 @@ paths:
           in: query
           description: |
             A filter expression that limits the results based on a set of criteria.
-            For example, $filter=fields/Title eq 'Test'.
+            To search for items by Name or Title or Título use for example, $filter=fields/Title eq 'Smartphone'.
+            To search for items by Marca or Brand use for example, $filter=fields/Marca eq 'Apple'.
+            To search for items by their availability or status use for example, $filter=fields/Status eq 'Disponível'.
+            To search for items by location use for example, $filter=fields/Local eq 'HUB SP'
           schema:
             type: string
         - name: $select
@@ -52,15 +55,25 @@ paths:
                     {
                       "id": "1",
                       "fields": {
-                        "Title": "Item 1",
-                        "Description": "This is item 1"
+                        "Title": "Meta Quest",
+                        "Status": "Emprestado",
+                        "Marca": "Meta",
+                        "Local": "Innovation Canter Recife",
+                        "id": "1",
+                        "LinkTitleNoMenu": "Meta Quest",
+                        "LinkTitle": "Meta Quest",
                       }
                     },
                     {
                       "id": "2",
                       "fields": {
-                        "Title": "Item 2",
-                        "Description": "This is item 2"
+                        "Title": "Smartphone",
+                        "Status": "Disponível",
+                        "Marca": "Apple",
+                        "Local": "HUB SP",
+                        "id": "2",
+                        "LinkTitleNoMenu": "Smartphone",
+                        "LinkTitle": "Smartphone",
                       }
                     }
                   ]
