@@ -35,13 +35,6 @@ paths:
             To search for items by location use for example, $filter=fields/Local eq 'HUB SP'
           schema:
             type: string
-        - name: $select
-          in: query
-          description: |
-            A comma-separated list of properties to include in the response.
-            For example, $select=fields/Title,fields/Description.
-          schema:
-            type: string
       responses:
         '200':
           description: Successful response
