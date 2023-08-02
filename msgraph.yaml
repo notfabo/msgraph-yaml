@@ -27,7 +27,7 @@ paths:
             type: string
         - name: $filter
           in: query
-          description: |
+          description: | 
             A filter expression that limits the results based on a set of criteria.
             To search for items by Name or Title or Título use for example, $filter=fields/Title eq 'Smartphone'.
             To search for items by Marca or Brand use for example, $filter=fields/Marca eq 'Apple'.
