@@ -29,10 +29,10 @@ paths:
           in: query
           description: | 
             A filter expression that limits the results based on a set of criteria.
-            To search for items by Name or Title or Título use for example: $filter=fields/Title eq 'Smartphone'&$expand=fields.
-            To search for items by Marca or Brand use for example: $filter=fields/Marca eq 'Apple'&$expand=fields.
-            To search for items by their availability or status use for example: $filter=fields/Status eq 'Disponível'&$expand=fields.
-            To search for items by location use for example: $filter=fields/Local eq 'HUB SP'&$expand=fields.
+            To search for items by Name or Title or Título use for example: $filter=fields/Title eq 'Smartphone'.
+            To search for items by Marca or Brand use for example: $filter=fields/Marca eq 'Apple'.
+            To search for items by their availability or status use for example: $filter=fields/Status eq 'Disponível'.
+            To search for items by location use for example: $filter=fields/Local eq 'HUB SP'.
           schema:
             type: string
         - name: $expand
