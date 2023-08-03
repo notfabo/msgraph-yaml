@@ -42,13 +42,6 @@ paths:
             For example: &$expand=fields"
           schema:
             type: string
-        - name: $select
-          in: query
-          description: |
-             A comma-separated list of properties to include in the response.
-             For example, $select=fields/Title,fields/Status,fields/Marca,fields/Local,fields/id,fields/LinkTitleNoMenu,fields/LinkTitle.
-          schema:
-            type: string
       responses:
         '200':
           description: Successful response
