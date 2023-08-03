@@ -35,11 +35,18 @@ paths:
             To search for items by location use for example: $filter=fields/Local eq 'HUB SP'&$expand=fields.
           schema:
             type: string
-         - name: $expand
+        - name: $expand
           in: query
           description: |
             "To be used for expanding the fields.
             For example: &$expand=fields"
+          schema:
+            type: string
+        - name: $select
+          in: query
+          description: |
+             A comma-separated list of properties to include in the response.
+             For example, $select=fields/Title,fields/Status,fields/Marca,fields/Local,fields/id,fields/LinkTitleNoMenu,fields/LinkTitle.
           schema:
             type: string
       responses:
